@@ -6,7 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import com.google.android.ads.mediationtestsuite.activities.HomeActivity;
+//import com.google.android.ads.mediationtestsuite.activities.HomeActivity;
 import com.google.firebase.auth.FirebaseAuth;
 
 
