@@ -1,4 +1,4 @@
-package com.thanhnhanshop.thanhnhanshop.Model;
+package vn.tdc.android_number_17.Model;
 
 import android.util.Log;
 import android.widget.Toast;

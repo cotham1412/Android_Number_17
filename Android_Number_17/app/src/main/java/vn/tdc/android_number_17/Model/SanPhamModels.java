@@ -1,4 +1,4 @@
-package com.thanhnhanshop.thanhnhanshop.Model;
+package vn.tdc.android_number_17.Model;
 
 import androidx.annotation.NonNull;
 
