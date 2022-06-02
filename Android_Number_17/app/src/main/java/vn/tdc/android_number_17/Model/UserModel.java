@@ -1,4 +1,4 @@
-package com.thanhnhanshop.thanhnhanshop.Model;
+package vn.tdc.android_number_17.Model;
 
 import androidx.annotation.NonNull;
 
@@ -6,7 +6,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.thanhnhanshop.thanhnhanshop.Presenter.IUSER;
+
 
 public class UserModel {
     private FirebaseAuth firebaseAuth;
