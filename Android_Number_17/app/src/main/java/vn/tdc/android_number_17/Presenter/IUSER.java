@@ -1,4 +1,4 @@
-package com.thanhnhanshop.thanhnhanshop.Presenter;
+package vn.tdc.android_number_17.Presenter;
 
 public interface IUSER {
     void OnLengthEmail();

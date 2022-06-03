@@ -1,6 +1,6 @@
-package com.thanhnhanshop.thanhnhanshop.Presenter;
+package vn.tdc.android_number_17.Presenter;
 
-import com.thanhnhanshop.thanhnhanshop.Model.UserModel;
+import vn.tdc.android_number_17.Model.UserModel;
 
 public class UserPreSenter  implements  IUSER{
     private UserModel userModel;
