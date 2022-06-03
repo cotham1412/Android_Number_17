@@ -230,9 +230,5 @@ public class SanPhamModels implements Serializable {
                             }
                         });break;
         }
-
-
     }
-
-
 }

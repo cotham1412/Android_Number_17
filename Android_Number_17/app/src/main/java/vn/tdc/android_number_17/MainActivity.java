@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
 
         new Handler().postDelayed(new Runnable() {
             @Override
+
             // check ktra đã đăng nhập vào thẳng vào Home
             public void run() {
                 if (firebaseAuth.getCurrentUser() != null) {
