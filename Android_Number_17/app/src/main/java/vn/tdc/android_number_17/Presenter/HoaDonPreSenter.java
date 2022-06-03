@@ -1,6 +1,6 @@
-package com.thanhnhanshop.thanhnhanshop.Presenter;
+package vn.tdc.android_number_17.Presenter;
 
-import com.thanhnhanshop.thanhnhanshop.Model.HoaDonModels;
+import vn.tdc.android_number_17.Model.HoaDonModels;
 
 public class HoaDonPreSenter  implements IHoaDon{
 

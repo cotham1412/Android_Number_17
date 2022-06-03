@@ -1,4 +1,4 @@
-package com.thanhnhanshop.thanhnhanshop.Presenter;
+package vn.tdc.android_number_17.Presenter;
 
 public interface ISanPham {
     void getDataSanPham(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong,
