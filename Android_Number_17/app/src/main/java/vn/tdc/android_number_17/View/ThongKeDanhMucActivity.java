@@ -19,6 +19,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+<<<<<<< HEAD
+=======
+import vn.tdc.android_number_17.Adapter.SanPhamAdapter;
+import vn.tdc.android_number_17.Model.SanPhamModels;
+import vn.tdc.android_number_17.Presenter.SanPhamPreSenter;
+import vn.tdc.android_number_17.Presenter.SanPhamView;
+import vn.tdc.android_number_17.R;
+>>>>>>> origin/main
 
 import java.util.ArrayList;
 import java.util.List;
