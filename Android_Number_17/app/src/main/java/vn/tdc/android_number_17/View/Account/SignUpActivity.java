@@ -83,7 +83,6 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
     public void OnPassNotSame() {
         Toast.makeText(this, "Mật khẩu không khớp!", Toast.LENGTH_SHORT).show();
     }
-
     @Override
     public void onClick(View v) {
         switch (v.getId()){
