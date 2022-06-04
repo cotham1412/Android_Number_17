@@ -40,7 +40,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
-                android:text="Nhom 3"
+                android:text="Nhom 08"
                 android:textColor="#000000"
                 android:textSize="18sp" />
 
@@ -52,7 +52,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
-                android:text="Thủ Đức"
+                android:text="141 dien bien phu"
                 android:textColor="#008000"
                 android:textSize="18sp" />
 
@@ -62,7 +62,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:maxLines="2"
-                android:text="037777777"
+                android:text="012345678"
                 android:textColor="#008000"
                 android:textSize="18sp" />
             <TextView
@@ -94,13 +94,13 @@
         android:layout_marginRight="10dp"
         android:background="@color/purple_200" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:layout_width="match_parent"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
+     <androidx.recyclerview.widget.RecyclerView
+         android:layout_width="match_parent"
+         android:layout_margin="10dp"
+         android:layout_weight="1"
 
-        android:id="@+id/rcvSP"
-        android:layout_height="0dp"/>
+         android:id="@+id/rcvSP"
+         android:layout_height="0dp"/>
 
     <Button
         android:id="@+id/btncapnhat"
