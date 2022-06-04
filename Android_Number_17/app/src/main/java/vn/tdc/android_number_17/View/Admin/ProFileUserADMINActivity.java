@@ -1,11 +1,9 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.thanhnhanshop.team3shop.R;
 
 public class ProFileUserADMINActivity  extends AppCompatActivity {
     @Override

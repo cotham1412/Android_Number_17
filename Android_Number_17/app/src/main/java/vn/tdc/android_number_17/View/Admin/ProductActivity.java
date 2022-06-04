@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.app.ProgressDialog;
 import android.content.Intent;
@@ -7,12 +7,6 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.RecyclerView;
-
-
-import com.thanhnhanshop.team3shop.Model.SanPhamModels;
-import com.thanhnhanshop.team3shop.Presenter.ISanPham;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.dangsanphamActivity;
 
 import java.util.ArrayList;
 

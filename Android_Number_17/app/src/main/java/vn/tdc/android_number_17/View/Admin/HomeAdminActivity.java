@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,6 @@ import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.thanhnhanshop.team3shop.R;
 
 public class HomeAdminActivity  extends AppCompatActivity implements View.OnClickListener {
     private ImageView imgdangsanpham;

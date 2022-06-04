@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.app.Dialog;
 import android.os.Bundle;
@@ -14,12 +14,6 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.ItemTouchHelper;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import com.thanhnhanshop.team3shop.Adapter.HoaDonAdMinAdapter;
-import com.thanhnhanshop.team3shop.Model.HoaDonModels;
-import com.thanhnhanshop.team3shop.Presenter.HoaDonPreSenter;
-import com.thanhnhanshop.team3shop.Presenter.HoaDonView;
-import com.thanhnhanshop.team3shop.R;
 
 import java.util.ArrayList;
 
@@ -94,7 +88,7 @@ public class BillADMiNActivity extends AppCompatActivity implements HoaDonView {
         Dialog dialog = new Dialog(this);
         dialog.setContentView(R.layout.dialog_update_trangthai);
         dialog.show();
-         hoaDonAdapter.notifyDataSetChanged();
+        hoaDonAdapter.notifyDataSetChanged();
 
         Spinner spiner = dialog.findViewById(R.id.spinerCapNhat);
         String[] s = {"Chọn Mục","Đang xử lý","Đang giao hàng","Giao hàng thành công","Hủy hàng"} ;
@@ -103,10 +97,10 @@ public class BillADMiNActivity extends AppCompatActivity implements HoaDonView {
         spiner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                       if(position>0){
-                           hoaDonPreSenter.CapNhatTrangThai(4,arrayList.get(pos).getId());
-                           dialog.cancel();
-                       }
+                if(position>0){
+                    hoaDonPreSenter.CapNhatTrangThai(4,arrayList.get(pos).getId());
+                    dialog.cancel();
+                }
             }
 
             @Override
@@ -140,3 +134,4 @@ public class BillADMiNActivity extends AppCompatActivity implements HoaDonView {
         hoaDonPreSenter.HandleReadDataHD(0);
     }
 }
+

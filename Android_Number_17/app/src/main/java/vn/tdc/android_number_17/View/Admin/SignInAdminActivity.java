@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -14,10 +14,8 @@ import androidx.appcompat.app.AppCompatActivity;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.thanhnhanshop.team3shop.Presenter.UserPreSenter;
-import com.thanhnhanshop.team3shop.R;
 
-public class SignInAdminActivity extends AppCompatActivity  implements  View.OnClickListener {
+public class SignInAdminActivity extends AppCompatActivity implements  View.OnClickListener {
     private Button btndangnhap;
     private EditText editemail,editpass;
     private UserPreSenter userPreSenter;
@@ -63,25 +61,23 @@ public class SignInAdminActivity extends AppCompatActivity  implements  View.OnC
                         db.collection("Admin").
                                 whereEqualTo("username",username)
                                 .whereEqualTo("pass",pass).get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                            @Override
-                            public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
-                                if(queryDocumentSnapshots.size()>0){
-                                    startActivity(new Intent(SignInAdminActivity.this,HomeAdminActivity.class));
-                                    finish();
-                                }else{
-                                    Toast.makeText(SignInAdminActivity.this, "Sai tài khoản / Mật khẩu", Toast.LENGTH_SHORT).show();
-                                }
+                                    @Override
+                                    public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
+                                        if(queryDocumentSnapshots.size()>0){
+                                            startActivity(new Intent(SignInAdminActivity.this,HomeAdminActivity.class));
+                                            finish();
+                                        }else{
+                                            Toast.makeText(SignInAdminActivity.this, "Sai tài khoản / Mật khẩu", Toast.LENGTH_SHORT).show();
+                                        }
 
-                            }
-                        })     ;
+                                    }
+                                })     ;
                     }else{
 
                     }
                 }else{
 
                 }
-
-
 
         }
     }

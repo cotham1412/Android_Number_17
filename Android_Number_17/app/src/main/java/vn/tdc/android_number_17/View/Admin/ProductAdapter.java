@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -12,14 +12,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.squareup.picasso.Picasso;
-import com.thanhnhanshop.team3shop.Model.SanPhamModels;
-import com.thanhnhanshop.team3shop.Presenter.SetOnItemClick;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.dangsanphamActivity;
 
 import java.text.NumberFormat;
 import java.util.ArrayList;
-
 
 public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHolder> {
     private Activity context;
@@ -90,3 +85,4 @@ public class ProductAdapter extends RecyclerView.Adapter<ProductAdapter.ViewHold
         }
     }
 }
+

@@ -1,4 +1,4 @@
-package com.thanhnhanshop.team3shop.View.Admin;
+package vn.tdc.android_number_17.View.Admin;
 
 import android.graphics.Color;
 import android.os.Bundle;
@@ -9,22 +9,14 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.github.mikephil.charting.charts.PieChart;
-import com.github.mikephil.charting.components.Legend;
-import com.github.mikephil.charting.data.PieData;
-import com.github.mikephil.charting.data.PieDataSet;
-import com.github.mikephil.charting.data.PieEntry;
-import com.github.mikephil.charting.formatter.PercentFormatter;
-import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.thanhnhanshop.team3shop.R;
 
 import java.util.ArrayList;
 
-public class ChartBillActivity  extends AppCompatActivity  {
+public class ChartBillActivity  extends AppCompatActivity {
     private PieChart pieChart;
     private  float dangxuly = 0,danggiaohang=0,giaohangthanhcong=0,huyhang=0;
 
@@ -96,16 +88,6 @@ public class ChartBillActivity  extends AppCompatActivity  {
 
             }
         });
-
-
-
-
-
-
-
-
-
-
-
     }
 }
+
