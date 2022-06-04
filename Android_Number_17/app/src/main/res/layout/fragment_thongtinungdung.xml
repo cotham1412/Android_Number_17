@@ -27,7 +27,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="-10dp"
-        android:text="   Nhóm 08: "
+        android:text="   Nhóm 05: "
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -47,7 +47,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="7dp"
-        android:text="   1. Đỗ Thanh Nhàn (Leader):"
+        android:text="   1. TRẦN VĂN KHIÊM (leader):"
         android:textColor="@color/colorBlack"
 
         android:textSize="15sp" />
@@ -57,7 +57,17 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="7dp"
-        android:text="   2. Nguyễn Vinh Hiển"
+        android:text="   2. TRƯƠNG THÁI ANH"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="7dp"
+        android:text="   3. NÃO THỊ THÙY DUNG"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -75,17 +85,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="-10dp"
-        android:text="   TS. Nguyễn Hà Giang"
-        android:textAllCaps="true"
-        android:textColor="@color/colorBlack"
-        android:textSize="15sp" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="15sp"
-        android:layout_marginTop="8dp"
-        android:text="   GV. Trường đại học kinh tế tài chính thành phố hồ chí minh đã hướng dẫn nhóm em hoàn thành dự án này"
+        android:text="   GV: TIÊU KIM CƯƠNG đã hướng dẫn nhóm em hoàn thành dự án này"
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
@@ -105,11 +105,18 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="15sp"
         android:layout_marginTop="8dp"
-        android:text="   Trường Đại học Kinh tế - Tài chính Thành phố Hồ Chí Minh - UEF
-Trụ sở 141 - 145 Điện Biên Phủ Phường 15, Quận Bình Thạnh, TP.HCM"
+        android:text="   Trường cao đẳng công nghệ thủ đức "
         android:textAllCaps="true"
         android:textColor="@color/colorBlack"
         android:textSize="15sp" />
-
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15sp"
+        android:layout_marginTop="8dp"
+        android:text="   53 Võ Văn Ngân, p. linh chiểu, tp. thủ đức"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="15sp" />
 
 </LinearLayout>
