@@ -19,8 +19,6 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import com.thanhnhanshop.team3shop.R;
-
 public class ContactActivity  extends AppCompatActivity implements OnMapReadyCallback {
     private Toolbar toolbar;
     private FirebaseFirestore db;
@@ -40,16 +38,16 @@ public class ContactActivity  extends AppCompatActivity implements OnMapReadyCal
 
         db.collection("ThongTinCuaHang").document("7k3ZcsrPZnn4RIKvAVIy")
                 .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(@NonNull DocumentSnapshot documentSnapshot) {
+                    @Override
+                    public void onSuccess(@NonNull DocumentSnapshot documentSnapshot) {
 
-                txtdiachi.setText("Địa chỉ : "+documentSnapshot.getString("diachi"));
-                txtsdt.setText("Liên hệ : "+documentSnapshot.getString("sdt"));
-                txtnoidung.setText("Nội Dung : "+documentSnapshot.getString("noidung"));
+                        txtdiachi.setText("Địa chỉ : "+documentSnapshot.getString("diachi"));
+                        txtsdt.setText("Liên hệ : "+documentSnapshot.getString("sdt"));
+                        txtnoidung.setText("Nội Dung : "+documentSnapshot.getString("noidung"));
 
 
-            }
-        });
+                    }
+                });
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Back");
@@ -78,3 +76,5 @@ public class ContactActivity  extends AppCompatActivity implements OnMapReadyCal
 
     }
 }
+
+

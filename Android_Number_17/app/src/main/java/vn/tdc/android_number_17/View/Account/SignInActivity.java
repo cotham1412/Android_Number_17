@@ -11,13 +11,8 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.thanhnhanshop.team3shop.Presenter.UserPreSenter;
-import com.thanhnhanshop.team3shop.Presenter.UserView;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.View.Admin.SignInAdminActivity;
-import com.thanhnhanshop.team3shop.View.HomeActivity;
 
-public class SignInActivity  extends AppCompatActivity  implements UserView , View.OnClickListener {
+public class SignInActivity  extends AppCompatActivity implements UserView , View.OnClickListener {
     private Button btndangnhap;
     private EditText editemail,editpass;
     private UserPreSenter userPreSenter;
@@ -94,7 +89,7 @@ public class SignInActivity  extends AppCompatActivity  implements UserView , Vi
     public void OnPassNotSame() {
         Toast.makeText(this, "Tài khoản mật khẩu không khớp", Toast.LENGTH_SHORT).show();
     }
-/// ẤN đang nhap
+    /// ẤN đang nhap
     @Override
     public void onClick(View v) {
         switch (v.getId()){
@@ -105,4 +100,6 @@ public class SignInActivity  extends AppCompatActivity  implements UserView , Vi
         }
     }
 }
+
+
 

@@ -29,12 +29,6 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.View.Account.SignInActivity;
-import com.thanhnhanshop.team3shop.View.Bill.CartActivity;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_Bill;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_Home;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_ProFile;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
@@ -71,25 +65,25 @@ public class HomeActivity  extends AppCompatActivity implements FragMent_Home.Fr
         db.collection("thongtinUser").document(FirebaseAuth.getInstance().getCurrentUser().getUid())
                 .collection("Profile")
                 .get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
-                if(queryDocumentSnapshots.size()>0){
-                    DocumentSnapshot documentSnapshot = queryDocumentSnapshots.getDocuments().get(0);
-                    if(documentSnapshot!=null){
-                        try{
-                            tvusername.setText(documentSnapshot.getString("hoten").length()>0 ?
-                                    documentSnapshot.getString("hoten") : "");
+                    @Override
+                    public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
+                        if(queryDocumentSnapshots.size()>0){
+                            DocumentSnapshot documentSnapshot = queryDocumentSnapshots.getDocuments().get(0);
+                            if(documentSnapshot!=null){
+                                try{
+                                    tvusername.setText(documentSnapshot.getString("hoten").length()>0 ?
+                                            documentSnapshot.getString("hoten") : "");
 
-                            if(documentSnapshot.getString("avatar").length()>0){
-                                Picasso.get().load(documentSnapshot.getString("avatar").trim()).into(imaProfile);
+                                    if(documentSnapshot.getString("avatar").length()>0){
+                                        Picasso.get().load(documentSnapshot.getString("avatar").trim()).into(imaProfile);
+                                    }
+                                }catch (Exception e){
+                                    Log.d("ERROR",e.getMessage());
+                                }
                             }
-                        }catch (Exception e){
-                            Log.d("ERROR",e.getMessage());
                         }
                     }
-                }
-            }
-        });
+                });
     }
 
     private void Init() {    // custom thanh toolbar
@@ -107,8 +101,8 @@ public class HomeActivity  extends AppCompatActivity implements FragMent_Home.Fr
         fm = new FragMent_Home();
         getSupportFragmentManager().beginTransaction().replace(R.id.framelayout,fm).commit();
 
-         //Check user phân quyền tk đang nhap va chua dang nhap
-         firebaseAuth = FirebaseAuth.getInstance();
+        //Check user phân quyền tk đang nhap va chua dang nhap
+        firebaseAuth = FirebaseAuth.getInstance();
         FirebaseUser f = firebaseAuth.getCurrentUser();
         if(f!=null){ // chua dang nhap
             navigationView.getMenu().clear();
@@ -147,11 +141,11 @@ public class HomeActivity  extends AppCompatActivity implements FragMent_Home.Fr
             public boolean onEditorAction(TextView v, int actionId, KeyEvent event) {
                 if(actionId == EditorInfo.IME_ACTION_SEARCH){
                     String key = editsearch.getText().toString().trim();
-                     if(key.length()>0){
-                         startActivity(new Intent(HomeActivity.this,ThongKeDanhMucActivity.class).putExtra("KEY",key));
-                     }else{
-                         Toast.makeText(HomeActivity.this, "Tên sản phẩm không để trống", Toast.LENGTH_SHORT).show();
-                     }
+                    if(key.length()>0){
+                        startActivity(new Intent(HomeActivity.this,ThongKeDanhMucActivity.class).putExtra("KEY",key));
+                    }else{
+                        Toast.makeText(HomeActivity.this, "Tên sản phẩm không để trống", Toast.LENGTH_SHORT).show();
+                    }
                 }
                 return true;
             }
