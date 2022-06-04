@@ -34,7 +34,6 @@ import vn.tdc.android_number_17.View.Account.SignInActivity;
 import vn.tdc.android_number_17.View.Bill.CartActivity;
 import vn.tdc.android_number_17.View.FragMent.FragMent_Bill;
 import vn.tdc.android_number_17.View.FragMent.FragMent_Home;
-import vn.tdc.android_number_17.View.FragMent.FragMent_ProFile;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 
