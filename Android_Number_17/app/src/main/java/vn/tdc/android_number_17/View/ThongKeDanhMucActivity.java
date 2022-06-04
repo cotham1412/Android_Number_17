@@ -19,11 +19,14 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+<<<<<<< HEAD
+=======
 import vn.tdc.android_number_17.Adapter.SanPhamAdapter;
 import vn.tdc.android_number_17.Model.SanPhamModels;
 import vn.tdc.android_number_17.Presenter.SanPhamPreSenter;
 import vn.tdc.android_number_17.Presenter.SanPhamView;
 import vn.tdc.android_number_17.R;
+>>>>>>> origin/main
 
 import java.util.ArrayList;
 import java.util.List;
@@ -33,7 +36,7 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
     private FirebaseFirestore db;
     private Toolbar toolbar;
     private List<String> list;
-    private  ArrayList<SanPhamModels> arrayList;
+    private ArrayList<SanPhamModels> arrayList;
     private SanPhamPreSenter sanPhamPreSenter;
     private RecyclerView rCvSP;
     private SanPhamAdapter sanPhamAdapter;
@@ -53,8 +56,8 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
 
 
 
-       sanPhamPreSenter = new SanPhamPreSenter(this);
-       arrayList  =new ArrayList<>();
+        sanPhamPreSenter = new SanPhamPreSenter(this);
+        arrayList  =new ArrayList<>();
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setTitle("Back");
@@ -71,11 +74,11 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
         db.collection("LoaiSP").get().addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
             @Override
             public void onSuccess(@NonNull QuerySnapshot queryDocumentSnapshots) {
-               for(QueryDocumentSnapshot q :  queryDocumentSnapshots){
-                   list.add(q.getString("tenloai"));
-               }
+                for(QueryDocumentSnapshot q :  queryDocumentSnapshots){
+                    list.add(q.getString("tenloai"));
+                }
                 ArrayAdapter arrayAdapter = new ArrayAdapter(ThongKeDanhMucActivity.this, android.R.layout.simple_list_item_1,list);
-               spinerthongke.setAdapter(arrayAdapter);
+                spinerthongke.setAdapter(arrayAdapter);
 
             }
         });
@@ -85,19 +88,19 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
                 sanPhamAdapter.notifyDataSetChanged();
             }
             String key = intent.getStringExtra("KEY");
-          sanPhamPreSenter.HandlegetDataSanPham(key,2);
+            sanPhamPreSenter.HandlegetDataSanPham(key,2);
         }
         spinerthongke.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                    if(position>0){
-                        arrayList.clear();
-                        if(sanPhamAdapter!=null){
-                            sanPhamAdapter.notifyDataSetChanged();
-                        }
-                        sanPhamPreSenter.HandlegetDataSanPham(spinerthongke.getSelectedItem().toString(),1);
-
+                if(position>0){
+                    arrayList.clear();
+                    if(sanPhamAdapter!=null){
+                        sanPhamAdapter.notifyDataSetChanged();
                     }
+                    sanPhamPreSenter.HandlegetDataSanPham(spinerthongke.getSelectedItem().toString(),1);
+
+                }
             }
 
             @Override
@@ -115,10 +118,10 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
 
     @Override
     public void getDataSanPham(String id, String tensp, Long giatien, String hinhanh, String loaisp, String mota, Long soluong, String nhasanxuat, Long type, String baohanh) {
-       arrayList.add(new SanPhamModels(id,tensp,giatien,hinhanh,loaisp,mota,soluong,nhasanxuat,type,baohanh));
-       sanPhamAdapter = new SanPhamAdapter(this,arrayList,1);
-       rCvSP.setLayoutManager(new LinearLayoutManager(this));
-       rCvSP.setAdapter(sanPhamAdapter);
+        arrayList.add(new SanPhamModels(id,tensp,giatien,hinhanh,loaisp,mota,soluong,nhasanxuat,type,baohanh));
+        sanPhamAdapter = new SanPhamAdapter(this,arrayList,1);
+        rCvSP.setLayoutManager(new LinearLayoutManager(this));
+        rCvSP.setAdapter(sanPhamAdapter);
 
 
     }
@@ -133,3 +136,5 @@ public class ThongKeDanhMucActivity  extends AppCompatActivity implements SanPha
 
     }
 }
+
+
