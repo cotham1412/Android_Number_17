@@ -12,10 +12,17 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
+import vn.tdc.android_number_17.Presenter.UserPreSenter;
+import vn.tdc.android_number_17.Presenter.UserView;
+import vn.tdc.android_number_17.R;
+import vn.tdc.android_number_17.View.Account.SignInActivity;
+import vn.tdc.android_number_17.View.Account.SignUpActivity;
+import vn.tdc.android_number_17.View.HomeActivity;
 
-public class SignInAdminActivity extends AppCompatActivity implements  View.OnClickListener {
+public class SignInAdminActivity extends AppCompatActivity  implements  View.OnClickListener {
     private Button btndangnhap;
     private EditText editemail,editpass;
     private UserPreSenter userPreSenter;
@@ -79,7 +86,8 @@ public class SignInAdminActivity extends AppCompatActivity implements  View.OnCl
 
                 }
 
+
+
         }
     }
 }
-

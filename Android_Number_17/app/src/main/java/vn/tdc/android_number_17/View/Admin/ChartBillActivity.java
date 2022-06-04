@@ -3,20 +3,37 @@ package vn.tdc.android_number_17.View.Admin;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
+import com.github.mikephil.charting.charts.PieChart;
+import com.github.mikephil.charting.components.Legend;
+import com.github.mikephil.charting.data.PieData;
+import com.github.mikephil.charting.data.PieDataSet;
+import com.github.mikephil.charting.data.PieEntry;
+import com.github.mikephil.charting.formatter.PercentFormatter;
+import com.github.mikephil.charting.utils.ColorTemplate;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
+import vn.tdc.android_number_17.Adapter.HoaDonAdapter;
+import vn.tdc.android_number_17.Model.HoaDonModels;
+import vn.tdc.android_number_17.Presenter.HoaDonPreSenter;
+import vn.tdc.android_number_17.Presenter.HoaDonView;
+import vn.tdc.android_number_17.R;
 
 import java.util.ArrayList;
 
-public class ChartBillActivity  extends AppCompatActivity {
+public class ChartBillActivity  extends AppCompatActivity  {
     private PieChart pieChart;
     private  float dangxuly = 0,danggiaohang=0,giaohangthanhcong=0,huyhang=0;
 
@@ -88,6 +105,9 @@ public class ChartBillActivity  extends AppCompatActivity {
 
             }
         });
+
+
+
+
     }
 }
-

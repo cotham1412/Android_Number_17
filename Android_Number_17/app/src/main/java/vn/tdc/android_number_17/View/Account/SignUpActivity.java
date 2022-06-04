@@ -12,13 +12,12 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-<<<<<<< HEAD
-=======
+
 import vn.tdc.android_number_17.Presenter.UserPreSenter;
 import vn.tdc.android_number_17.Presenter.UserView;
 import vn.tdc.android_number_17.R;
 import vn.tdc.android_number_17.View.HomeActivity;
->>>>>>> origin/main
+
 
 public class SignUpActivity extends AppCompatActivity implements UserView , View.OnClickListener {
     private Button btndangky;
