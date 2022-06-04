@@ -14,32 +14,46 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.thanhnhanshop.team3shop.Presenter.UserPreSenter;
 import com.thanhnhanshop.team3shop.Presenter.UserView;
 import com.thanhnhanshop.team3shop.R;
+import com.thanhnhanshop.team3shop.View.Admin.SignInAdminActivity;
 import com.thanhnhanshop.team3shop.View.HomeActivity;
 
-public class SignUpActivity extends AppCompatActivity  implements UserView , View.OnClickListener {
-    private Button btndangky;
-    private EditText editemail,editpass,editpass_repeat;
+public class SignInActivity  extends AppCompatActivity  implements UserView , View.OnClickListener {
+    private Button btndangnhap;
+    private EditText editemail,editpass;
     private UserPreSenter userPreSenter;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_sign_up);
+        setContentView(R.layout.activity_sign_in);
         InitWidget();
         Init();
     }
 
     private void Init() {
         userPreSenter = new UserPreSenter(this);
-        btndangky.setOnClickListener(this);
+        btndangnhap.setOnClickListener(this);
+        findViewById(R.id.txtdangky).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(SignInActivity.this,SignUpActivity.class));
+
+            }
+        });
+        findViewById(R.id.txtadmin).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent( SignInActivity.this, SignInAdminActivity.class));
+
+            }
+        });
 
     }
 
     private void InitWidget() {
-        btndangky = findViewById(R.id.btndangky);
+        btndangnhap = findViewById(R.id.btndangnhap);
         editemail=findViewById(R.id.editEmail);
         editpass = findViewById(R.id.editmatkhau);
-        editpass_repeat = findViewById(R.id.editmatkhau_repeat);
     }
 
     @Override
@@ -61,7 +75,7 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
     @Override
     public void OnSucess() {
         startActivity(new Intent(this, HomeActivity.class));
-        Toast.makeText(this, "Đăng ký thành công", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Đăng nhập thành công", Toast.LENGTH_SHORT).show();
         finish();
 
     }
@@ -69,28 +83,25 @@ public class SignUpActivity extends AppCompatActivity  implements UserView , Vie
     @Override
     public void OnAuthEmail() {
         FirebaseAuth.getInstance().getCurrentUser().sendEmailVerification();
-
-        Toast.makeText(this, "Hãy vào gamil để xác thực tài khoản của bạn !", Toast.LENGTH_SHORT).show();
-        finish();
+        Toast.makeText(this, "Làm ơn hãy vào gmail xác thực !", Toast.LENGTH_SHORT).show();
     }
 
     @Override
     public void OnFail() {
-        Toast.makeText(this, "Tài khoản đã được đăng ký !", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Sai tài khoản / Mật khẩu", Toast.LENGTH_SHORT).show();
     }
-
     @Override
     public void OnPassNotSame() {
-        Toast.makeText(this, "Mật khẩu không khớp!", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, "Tài khoản mật khẩu không khớp", Toast.LENGTH_SHORT).show();
     }
+/// ẤN đang nhap
     @Override
     public void onClick(View v) {
         switch (v.getId()){
-            case  R.id.btndangky:
+            case  R.id.btndangnhap:
                 String email=editemail.getText().toString();
                 String pass =editpass.getText().toString().trim();
-                String repass =editpass_repeat.getText().toString().trim();
-                userPreSenter.HandleRegist(email,pass,repass);
+                userPreSenter.HandleLoginUser(email,pass);
         }
     }
 }
