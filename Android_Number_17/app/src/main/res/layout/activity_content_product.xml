@@ -74,58 +74,6 @@
                 android:textColor="#4b0082"
                 android:textSize="14sp" />
 
-            <ImageView
-                android:layout_marginTop="10dp"
-                android:id="@+id/img_thongtin"
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="10dp"
-                android:background="@drawable/real"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_marginTop="5dp"
-                android:id="@+id/text_thongtin"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:text="Cam kết hàng chính hãng 100%"
-                android:textAlignment="center"
-                android:textColor="@color/black" />
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="100dp"
-                android:layout_marginTop="-105dp"
-                android:background="@drawable/momo"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_marginTop="6dp"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="80dp"
-                android:text="Thanh toán momo tiện lợi"
-                android:textAlignment="center"
-                android:textColor="@color/black" />
-
-
-            <ImageView
-                android:layout_width="50dp"
-                android:layout_height="50dp"
-                android:layout_marginStart="190dp"
-                android:layout_marginTop="-105dp"
-                android:background="@drawable/money"
-                android:scaleType="fitXY" />
-
-            <TextView
-                android:layout_marginTop="6dp"
-                android:layout_width="80dp"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="170dp"
-                android:text="Đổi trả trong vòng 7 ngày"
-                android:textAlignment="center"
-                android:textColor="@color/black" />
 
 
         </LinearLayout>

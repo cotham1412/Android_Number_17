@@ -130,12 +130,12 @@
         </LinearLayout>
     </androidx.cardview.widget.CardView>
 
-    <ImageView
-        android:id="@+id/imgdangsanpham"
-        android:layout_below="@+id/cSignOut"
-        android:layout_width="150dp"
-        android:background="@color/purple_500"
-        android:layout_marginLeft="130dp"
-        android:layout_height="150dp"
-        android:text="Đăng sản phẩm"/>
+<ImageView
+    android:id="@+id/imgdangsanpham"
+    android:layout_below="@+id/cSignOut"
+    android:layout_width="150dp"
+    android:background="@color/purple_500"
+    android:layout_marginLeft="130dp"
+    android:layout_height="150dp"
+    android:text="Đăng sản phẩm"/>
 </RelativeLayout>
