@@ -19,11 +19,11 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
-import com.thanhnhanshop.team3shop.Adapter.SanPhamAdapter;
-import com.thanhnhanshop.team3shop.Model.SanPhamModels;
-import com.thanhnhanshop.team3shop.Presenter.SanPhamPreSenter;
-import com.thanhnhanshop.team3shop.Presenter.SanPhamView;
-import com.thanhnhanshop.team3shop.R;
+import vn.tdc.android_number_17.Adapter.SanPhamAdapter;
+import vn.tdc.android_number_17.Model.SanPhamModels;
+import vn.tdc.android_number_17.Presenter.SanPhamPreSenter;
+import vn.tdc.android_number_17.Presenter.SanPhamView;
+import vn.tdc.android_number_17.R;
 
 import java.util.ArrayList;
 import java.util.List;

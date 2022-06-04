@@ -19,7 +19,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 
-import com.thanhnhanshop.team3shop.R;
+import vn.tdc.android_number_17.R;
 
 public class ContactActivity  extends AppCompatActivity implements OnMapReadyCallback {
     private Toolbar toolbar;

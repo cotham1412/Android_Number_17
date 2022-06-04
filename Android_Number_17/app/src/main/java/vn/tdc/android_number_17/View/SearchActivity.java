@@ -5,7 +5,7 @@ import android.os.Bundle;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.thanhnhanshop.team3shop.R;
+import vn.tdc.android_number_17.R;
 
 public class SearchActivity  extends AppCompatActivity {
     @Override
