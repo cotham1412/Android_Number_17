@@ -90,7 +90,6 @@ public class SignInActivity  extends AppCompatActivity  implements UserView , Vi
     public void OnFail() {
         Toast.makeText(this, "Sai tài khoản / Mật khẩu", Toast.LENGTH_SHORT).show();
     }
-
     @Override
     public void OnPassNotSame() {
         Toast.makeText(this, "Tài khoản mật khẩu không khớp", Toast.LENGTH_SHORT).show();
