@@ -3,10 +3,14 @@ package vn.tdc.android_number_17.View.Admin;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import vn.tdc.android_number_17.R;
+import vn.tdc.android_number_17.dangsanphamActivity;
 
 public class HomeAdminActivity  extends AppCompatActivity implements View.OnClickListener {
     private ImageView imgdangsanpham;
@@ -29,9 +33,12 @@ public class HomeAdminActivity  extends AppCompatActivity implements View.OnClic
 
             case R.id.cThongKe: startActivity(new Intent( HomeAdminActivity.this,ChartBillActivity.class));break;
             case R.id.cSignOut: finish();break;
-            case R.id.imgdangsanpham: startActivity(new Intent( HomeAdminActivity.this, ProductActivity.class));break;
+            case R.id.imgdangsanpham: startActivity(new Intent( HomeAdminActivity.this, dangsanphamActivity.class));break;
+
+
 
         }
     }
 
 }
+

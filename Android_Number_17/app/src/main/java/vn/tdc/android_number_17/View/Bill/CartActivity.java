@@ -47,7 +47,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Map;
 
-import vn.momo.momo_partner.AppMoMoLib;
+
 
 public class CartActivity extends AppCompatActivity implements GioHangView {
     private RecyclerView rcVBill;
@@ -171,9 +171,9 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
                                     gioHangPreSenter.HandleAddHoaDon(ngaydat,diachi,hoten,sdt,phuongthuc,tongtien,arrayList);
                                     dialog.cancel();break;
                                 case 1:
-                                    AppMoMoLib.getInstance().setEnvironment(AppMoMoLib.ENVIRONMENT.DEVELOPMENT);
 
-                                    requestPayment();
+
+
                                     dialog.cancel();
                                     break;
 
@@ -247,99 +247,10 @@ public class CartActivity extends AppCompatActivity implements GioHangView {
 
     }
     //Thanh toán momo
-    private void requestPayment() {
-        AppMoMoLib.getInstance().setAction(AppMoMoLib.ACTION.PAYMENT);
-        AppMoMoLib.getInstance().setActionType(AppMoMoLib.ACTION_TYPE.GET_TOKEN);
-        Map<String, Object> eventValue = new HashMap<>();
-        //client Required
-        long mahd =   System.currentTimeMillis();
-        eventValue.put("merchantname", "Thanh Nhan"); //Tên đối tác. được đăng ký tại https://business.momo.vn. VD: Google, Apple, Tiki , CGV Cinemas
-        eventValue.put("merchantcode", "MOMO1NRV20220112"); //Mã đối tác, được cung cấp bởi MoMo tại https://business.momo.vn
-        eventValue.put("amount", tongtien); //Kiểu integer
-        eventValue.put("orderId", "order"+mahd); //uniqueue id cho Bill order, giá trị duy nhất cho mỗi đơn hàng
-        eventValue.put("orderLabel", "Mã đơn hàng"); //gán nhãn
-
-        //client Optional - bill info
-        eventValue.put("merchantnamelabel", "Dịch vụ");//gán nhãn
-        eventValue.put("fee", tongtien); //Kiểu integer
-        eventValue.put("description", "Mô tả"); //mô tả đơn hàng - short description
-
-        //client extra data
-        eventValue.put("requestId",  "MOMO1NRV20220112"+"merchant_billId_"+System.currentTimeMillis());
-        eventValue.put("partnerCode", "MOMO1NRV20220112");
-        //Example extra data
-        JSONObject objExtraData = new JSONObject();
-        try {
-            objExtraData.put("site_code", "008");
-            objExtraData.put("site_name", "Thanh Toán Đồ Điện Tử");
-            objExtraData.put("screen_code", 0);
-            objExtraData.put("screen_name", "Đặc Biệt");
-            String name ="";
-            for(SanPhamModels sanPham : arrayList){
-                name+=sanPham.getTensp()+",";
-            }
-            objExtraData.put("movie_name", name);
-            objExtraData.put("movie_format", "Đồ điện tử");
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        eventValue.put("extraData", objExtraData.toString());
-
-        eventValue.put("extra", "");
-        AppMoMoLib.getInstance().requestMoMoCallBack(CartActivity.this, eventValue);
-    }
-
-    @Override
-    public void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        Log.d("CHECKED","checked1");
-        if(requestCode == AppMoMoLib.getInstance().REQUEST_CODE_MOMO && resultCode == -1) {
-            Log.d("CHECKED","checked2");
-            if(data != null) {
-                Log.d("CHECKED","checked3");
-                if(data.getIntExtra("status", -1) == 0) {
-                    //TOKEN IS AVAILABLE
-                    Log.d("Messagesss","message: " + "Get token " + data.getStringExtra("message"));
-                    String checked = data.getStringExtra("message");
-                    Log.d("CHECKED",checked);
-                    Calendar calendar=Calendar.getInstance();
-                    SimpleDateFormat simpleDateFormat=new SimpleDateFormat("yyyy-MM-dd");
-                    gioHangPreSenter.HandleAddHoaDon(simpleDateFormat.format(calendar.getTime()),diachi,hoten,sdt,spinner.getSelectedItem().toString(),tongtien,arrayList);
-                    progressBar.setVisibility(View.GONE);
 
 
-                    String token = data.getStringExtra("data"); //Token response
-                    String phoneNumber = data.getStringExtra("phonenumber");
-                    String env = data.getStringExtra("env");
-                    if(env == null){
-                        env = "app";
-                    }
 
-                    if(token != null && !token.equals("")) {
-                        // TODO: send phoneNumber & token to your server side to process payment with MoMo server
-                        // IF Momo topup success, continue to process your order
-                    } else {
-                        Log.d("Message Error : ","message: " + "Get token " + data.getStringExtra("message"));
 
-                    }
-                } else if(data.getIntExtra("status", -1) == 1) {
-                    progressBar.setVisibility(View.GONE);
-                    String message = data.getStringExtra("message") != null?data.getStringExtra("message"):"Thất bại";
-                    Log.d("Message Fail : ","message: " + "Get token " + data.getStringExtra("message"));
-                } else if(data.getIntExtra("status", -1) == 2) {
-                    //TOKEN FAIL
-                    Log.d("Message Fail 1 : ","message: " + "Get token " + data.getStringExtra("message"));
-                } else {
-                    //TOKEN FAIL
-                    Log.d("Message Fail 2 : ","message: " + "Get token " + data.getStringExtra("message"));
-                }
-            } else {
-                Log.d("Message Fail 3 : ","message: " + "Get token " + data.getStringExtra("message"));
-            }
-        } else {
-            Log.d("Message Fail 4 : ","message: " + "Get token " + data.getStringExtra("message"));
-        }
-    }
 
 
 }
