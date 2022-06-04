@@ -15,12 +15,7 @@
            android:layout_height="130dp"
            android:scaleType="centerCrop" />
 
-       <ImageView
-           android:layout_width="50dp"
-           android:layout_height="50dp"
-           android:layout_marginTop="-1dp"
-           android:scaleX="1"
-           android:src="@drawable/hot2" />
+
 
    </RelativeLayout>
 
