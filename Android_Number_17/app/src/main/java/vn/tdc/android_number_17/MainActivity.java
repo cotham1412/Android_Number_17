@@ -7,8 +7,8 @@ import android.os.Bundle;
 import android.os.Handler;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.thanhnhanshop.thanhnhanshop.View.Account.SignInActivity;
-import com.thanhnhanshop.thanhnhanshop.View.HomeActivity;
+import vn.tdc.android_number_17.View.Account.SignInActivity;
+import vn.tdc.android_number_17.View.HomeActivity;
 
 public class MainActivity extends AppCompatActivity {
 
