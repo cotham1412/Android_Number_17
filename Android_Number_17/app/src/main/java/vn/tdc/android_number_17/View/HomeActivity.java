@@ -29,12 +29,12 @@ import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.squareup.picasso.Picasso;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.View.Account.SignInActivity;
-import com.thanhnhanshop.team3shop.View.Bill.CartActivity;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_Bill;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_Home;
-import com.thanhnhanshop.team3shop.View.FragMent.FragMent_ProFile;
+import vn.tdc.android_number_17.R;
+import vn.tdc.android_number_17.View.Account.SignInActivity;
+import vn.tdc.android_number_17.View.Bill.CartActivity;
+import vn.tdc.android_number_17.View.FragMent.FragMent_Bill;
+import vn.tdc.android_number_17.View.FragMent.FragMent_Home;
+import vn.tdc.android_number_17.View.FragMent.FragMent_ProFile;
 
 import de.hdodenhof.circleimageview.CircleImageView;
 

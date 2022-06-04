@@ -11,10 +11,10 @@ import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.thanhnhanshop.team3shop.Presenter.UserPreSenter;
-import com.thanhnhanshop.team3shop.Presenter.UserView;
-import com.thanhnhanshop.team3shop.R;
-import com.thanhnhanshop.team3shop.View.HomeActivity;
+import vn.tdc.android_number_17.Presenter.UserPreSenter;
+import vn.tdc.android_number_17.Presenter.UserView;
+import vn.tdc.android_number_17.R;
+import vn.tdc.android_number_17.View.HomeActivity;
 
 public class SignUpActivity extends AppCompatActivity  implements UserView , View.OnClickListener {
     private Button btndangky;
